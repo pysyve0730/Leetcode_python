@@ -3,9 +3,10 @@ class Solution:
         tmp = []
         for i in nums:
             j = i+1
-            for j in nums:
-                if nums[i]+nums[i+1]+nums[i+2]==0:
-                    tmp.append(nums[i])
-                    tmp.append(nums[i+1])
-                    tmp.append(nums[i+2])
+            k = i+2
+            if k<len(nums):
+                if nums[i]+nums[j]+nums[k]==0:
+                    tmp[i].append(nums[i])
+                    tmp[i].append(nums[j])
+                    tmp[i].append(nums[k])
             return tmp
